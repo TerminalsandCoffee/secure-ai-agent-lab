@@ -1,0 +1,29 @@
+name: lab
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  mock-mode:
+    runs-on: ubuntu-latest
+    env:
+      AGENT_LLM: mock
+      AGENT_HITL: deny
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Attack harness + retest
+        run: python -m attacks --agent both --out findings
+      - name: Upload findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: findings
+          path: findings/

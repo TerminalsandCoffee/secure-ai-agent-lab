@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secure-ai-agent-lab"
+version = "1.0.0"
+description = "Educational lab: attack, harden, and retest a tool-using support copilot."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Rafael M" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+acme-copilot = "agent.cli:main"
+acme-attacks = "attacks.harness:main"
+
+[tool.setuptools.packages.find]
+include = ["agent*", "attacks*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
