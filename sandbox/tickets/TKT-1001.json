@@ -1,0 +1,10 @@
+{
+  "id": "TKT-1001",
+  "customer": "Dana Alvarez",
+  "email": "dana@example.com",
+  "product": "Model A toaster",
+  "subject": "Refund for Model A toaster",
+  "body": "I bought the toaster 12 days ago and the lever jammed. Can I get a refund?",
+  "status": "open",
+  "opened_at": "2026-08-28"
+}

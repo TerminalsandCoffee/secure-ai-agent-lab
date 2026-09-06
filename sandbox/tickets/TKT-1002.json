@@ -1,0 +1,10 @@
+{
+  "id": "TKT-1002",
+  "customer": "Sam Okonkwo",
+  "email": "sam@example.com",
+  "product": "Model C kettle",
+  "subject": "Where is my shipment?",
+  "body": "Order left the warehouse five days ago. Tracking has not moved.",
+  "status": "open",
+  "opened_at": "2026-09-01"
+}

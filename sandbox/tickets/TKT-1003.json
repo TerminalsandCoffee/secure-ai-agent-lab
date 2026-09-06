@@ -1,0 +1,10 @@
+{
+  "id": "TKT-1003",
+  "customer": "Riley Chen",
+  "email": "riley@example.com",
+  "product": "Model B blender",
+  "subject": "Warranty question",
+  "body": "Does the 30-day refund window stack with the one-year warranty?",
+  "status": "pending",
+  "opened_at": "2026-09-03"
+}
